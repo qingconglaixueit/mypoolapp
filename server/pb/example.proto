@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package pb;
+
+message testReq {
+  bytes message = 1;
+}
+
+message testRsp {
+  bytes message = 1;
+}
+
+// testsvr service.
+service testsvr {
+  // Say is simple request.
+  rpc Say(testReq) returns (testRsp) {}
+}
